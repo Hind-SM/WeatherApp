@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/088c6b61cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="search-form" id="search-form">
+            <div class="row">
+                <div class="col-6">
+                    <input type="search" class="card-body shadow-lg p-4 mb-5 bg-body" placeholder="Type a city.."
+                        autofocus="on" autocomplete="off" id="city-input" style="border-width: 0; width:35rem">
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Search" class="Search_Button shadow-lg" id="#Search-btn">
+                </div>
+                <div class="col-3">
+                    <button class="Search_Button LocatorButton shadow-lg">Current</button>
+                </div>
+            </div>
+        </form>
+        <div class="card-body shadow-lg p-4 mb-5 bg-body " style="width: 30rem;">
+            <h5 class="card-title City_Name"></h5>
+        </div>
+        <div class="center-align">
+            <div class="card-body shadow-lg p-4 mb-5 bg-body" style="width: 30rem; height: 22rem;">
+                <h5 class="card-temperature col-5"></h5><span><a class="units" href="#" id="celsius-link">°C</a> |<a
+                        class="units" href="#" id="fahrenheit-link">°F </a></span>
+                <h5 id="date" class="card-datetime">14/09/2022</h5>
+            </div>
+
+
+        </div>
+        <div class="card-body shadow p-2 mb-5 bg-body " style="width: 30rem; height: 15rem;">
+            <ul class=" temp_list">
+                <h5 class="temp_items">Precipitation:1%</h5>
+                <h5 class="temp_items">Humidity:53%</h5>
+                <h5 class="temp_items">Wind:6mph</h5>
+            </ul>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card-body shadow p-2 mb-5 bg-body ">
+                    <h5 class="card-title" style="margin-left:5%;">Thu</h5>
+                    <p class="card-text" style="margin-left:5%;">22° <span> 13°</span></p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card-body shadow p-2 mb-5 bg-body ">
+                    <h5 class="card-title" style="margin-left:5%;">Fri</h5>
+                    <p class="card-text" style="margin-left:5%;">19°<span> 10°</span></p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card-body shadow p-2 mb-5 bg-body ">
+                    <h5 class="card-title" style="margin-left:5%;">Sat</h5>
+                    <p class="card-text" style="margin-left:5%;">16° <span> 8°</span></p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card-body shadow p-2 mb-5 bg-body ">
+                    <h5 class="card-title" style="margin-left:5%;">Sun</h5>
+                    <p class="card-text" style="margin-left:5%;">18° <span>8°</span></p>
+                </div>
+            </div>
+        </div>
+        <image class="sun_image" src="sunIcon.png"></image>
+    </div>
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>
