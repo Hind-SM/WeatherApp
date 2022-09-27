@@ -96,3 +96,13 @@ span {
   bottom: 900px;
   width: 500px;
 }
+.GitButton{
+  font-size: 30px;
+  background-color: #feed9f91;
+  border-radius: 25px;
+  padding: 2%;
+  border-color: rgba(0, 0, 0, 0.967);
+  margin: 0 auto;
+  color: black;
+  text-decoration: underline;
+}
