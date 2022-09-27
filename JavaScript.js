@@ -12,16 +12,38 @@ let DateCard = document.querySelector("#date");
 DateCard.innerHTML = `${currentDate} <br/> ${currentTime}`;
 
 
-//getting weather from api
+//getting weather and icon and changing background with api response
 function showWeather(response) {
+    console.log(response.data);
+    let background = document.querySelector("body") 
     let currentCity = document.querySelector(".City-Name");
     let temperature = Math.round(response.data.main.temp);
-    let cityName = response.data.name
     CelsiusTemp = temperature;
-    currentCity.innerHTML = `${cityName}`;
+    let cityName = response.data.name
+    let iconElement = document.querySelector(".Icon");
+    let iconID = response.data.weather[0].icon;
+    let Description = document.querySelector(".Description");
+    let Humidity = document.querySelector(".Humidity");
+    let Wind = document.querySelector(".Wind");
+    let DescriptionString = response.data.weather[0].description;
     TempCard.innerHTML = `${temperature}`;
-    console.log(response.data);
-}
+    Description.innerHTML = `${DescriptionString.charAt(0).toUpperCase() + DescriptionString.slice(1)}`
+    Humidity.innerHTML = `Humidity:${response.data.main.humidity}%`;
+    Wind.innerHTML = `Wind:${response.data.wind.speed}mph`;
+    currentCity.innerHTML = `${cityName}`;
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`);
+
+    if (temperature <= 10) {
+        background.style.background = "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+        
+    } if(temperature <= 15) {
+        background.style.background = "0.2s ease-in-out","linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+        
+    } if(temperature < 20) {
+        background.style.background = "0.2s ease-in-out","linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+        
+    };
+};
 //ask user from current position 
 function retrievePosition(position) {
     let apiKey = "4ee75d8fd0a41a9e7dfc26c980f6da70";
@@ -73,3 +95,13 @@ let TempCard = document.querySelector(".card-temperature")
 CelsiusButton.addEventListener("click", Display_CelsiusTemp);
 FahrenheitButton.addEventListener("click", Display_FarenheitTemp);
 
+//icon changer function//
+// function Display_icon() {
+//     let apiKey = "4ee75d8fd0a41a9e7dfc26c980f6da70";
+//     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+//     axios.get(url).then(showWeather);
+//     icon.innerHTML = 
+
+// }
+
+let icon = document.querySelector(".Icon")
