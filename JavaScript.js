@@ -11,8 +11,6 @@ let currentTime = `${hours}:${minutes}`;
 let DateCard = document.querySelector("#date");
 DateCard.innerHTML = `${currentDate} <br/> ${currentTime}`;
 
-let bruh = "new variable";
-
 let CelsiusButton = document.querySelector("#celsius-link");
 let FahrenheitButton = document.querySelector("#fahrenheit-link");
 let Ctemp = (document.querySelector(".card-temperature")).innerHTML
