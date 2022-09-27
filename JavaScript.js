@@ -42,7 +42,9 @@ function showWeather(response) {
     } if(temperature < 20) {
         background.style.background = "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
         
-    };
+    } else {
+        background.style.background = "linear-gradient(135deg, #feec9f 15%, #fe813e 100%)";
+    }
 };
 //ask user from current position 
 function retrievePosition(position) {
