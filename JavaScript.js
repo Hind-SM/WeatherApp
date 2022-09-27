@@ -37,10 +37,10 @@ function showWeather(response) {
         background.style.background = "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
         
     } if(temperature <= 15) {
-        background.style.background = "0.2s ease-in-out","linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+        background.style.background = "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
         
     } if(temperature < 20) {
-        background.style.background = "0.2s ease-in-out","linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+        background.style.background = "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
         
     };
 };
