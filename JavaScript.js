@@ -144,3 +144,14 @@ CelsiusButton.addEventListener("click", Display_CelsiusTemp);
 FahrenheitButton.addEventListener("click", Display_FarenheitTemp);
 
 
+
+///////////////////////////////////////////////////////////////
+
+
+function DefaultWeather() {
+    let apiKey = "4ee75d8fd0a41a9e7dfc26c980f6da70";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+    axios.get(url).then(showWeather)
+}
+
+DefaultWeather();
