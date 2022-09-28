@@ -32,11 +32,10 @@ function show_WeatherForecast(response) {
         forecastBlocks.innerHTML = forecastBlocks.innerHTML +
             `<div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card1-day" style="margin-left:5%;">${formatDay(forecastday.dt)} <image src = "http://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png" width = "100"/></h5>
+                    <h5 class="card-title" style="margin-left:5%;">${formatDay(forecastday.dt)} <image src = "http://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png" width = "100"/></h5>
                     <p class="card-text forecast-temp" style="margin-left:5%;">${Math.round(forecastday.temp.max)}° <span> ${Math.round(forecastday.temp.min)}°</span></p>
                 </div>`;
     })
-
 }
 
 //daily forecast function
@@ -66,7 +65,7 @@ function showWeather(response) {
     TempCard.innerHTML = `${temperature}`;
     Description.innerHTML = `${DescriptionString.charAt(0).toUpperCase() + DescriptionString.slice(1)}`
     Humidity.innerHTML = `Humidity:${response.data.main.humidity}%`;
-    Wind.innerHTML = `Wind:${response.data.wind.speed}mph`;
+    Wind.innerHTML = `Wind:${response.data.wind.speed}km/ph`;
     currentCity.innerHTML = `${cityName}`;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`);
 
