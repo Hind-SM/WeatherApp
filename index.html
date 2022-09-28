@@ -18,6 +18,7 @@
 
 <body>
     <div class="container">
+
         <form class="search-form" id="search-form">
             <div class="row">
                 <div class="col-6">
@@ -32,53 +33,60 @@
                 </div>
             </div>
         </form>
-        <div class="card-body shadow-lg p-4 mb-5 bg-body " style="width: 30rem;">
-            <h5 class="card-title City-Name"></h5>
-        </div>
-        <div class="center-align">
-            <div class="card-body shadow-lg p-4 mb-5 bg-body" style="width: 30rem; height: 22rem;">
-                <h5 class="card-temperature col-5"></h5><span><a class="units" href="#" id="celsius-link">°C</a> |<a
-                        class="units" href="#" id="fahrenheit-link">°F </a></span>
-                <h5 id="date" class="card-datetime">14/09/2022</h5>
-            </div>
-        </div>
-        <div class="card-body shadow p-2 mb-5 bg-body " style="width: 30rem; height: 15rem;">
-            <ul class=" temp_list">
-                <h5 class="temp_items Description"> </h5>
-                <h5 class="temp_items Humidity">Humidity:53%</h5>
-                <h5 class="temp_items Wind">Wind:6mph</h5>
-            </ul>
 
+        <div class="row">
+            <div class="col">
+                <div class=" card-body shadow-lg p-4 mb-5 bg-body " style="width: 30rem;">
+                    <h5 class="card-title City-Name"></h5>
+                </div>
+                <div class="center-align">
+                    <div class="card-body shadow-lg p-4 mb-5 bg-body col-l" style="width: 30rem; height: 22rem;">
+                        <h5 class="card-temperature col-5"></h5><span><a class="units" href="#" id="celsius-link">°C</a>
+                            |<a class="units" href="#" id="fahrenheit-link">°F </a></span>
+                        <h5 id="date" class="card-datetime">14/09/2022</h5>
+                    </div>
+                </div>
+                <div class="card-body shadow p-2 mb-5 bg-body " style="width: 30rem; height: 15rem;">
+                    <ul class=" temp_list">
+                        <h5 class="temp_items Description"> </h5>
+                        <h5 class="temp_items Humidity">Humidity:53%</h5>
+                        <h5 class="temp_items Wind">Wind:6mph</h5>
+                    </ul>
+                </div>
+                <a href="https://github.com/Hind-SM/WeatherApp.git" target="_blank" class="GitButton">Link to Github
+                    repository</a>
+            </div>
+            <image class="Icon sun_image" src="sunIcon.png"></image>
         </div>
+
         <div class="row forecast-row">
             <div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card1-day" style="margin-left:5%;">Thu</h5>
-                    <p class="card-text forecast-temp" style="margin-left:5%;">22° <span> 13°</span></p>
+                    <h5 class="card-title card1-day" style="margin-left:5%;"></h5>
+                    <p class="card-text forecast-temp" style="margin-left:5%;"> <span> </span></p>
                 </div>
             </div>
             <div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card2-day" style="margin-left:5%;">Fri</h5>
-                    <p class="card-text forecast-temp" style="margin-left:5%;">19°<span> 10°</span></p>
+                    <h5 class="card-title card2-day" style="margin-left:5%;"></h5>
+                    <p class="card-text forecast-temp" style="margin-left:5%;"><span> </span></p>
                 </div>
             </div>
             <div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card3-day" style="margin-left:5%;">Sat</h5>
-                    <p class="card-text forecast-temp" style="margin-left:5%;">16° <span> 8°</span></p>
+                    <h5 class="card-title card3-day" style="margin-left:5%;"></h5>
+                    <p class="card-text forecast-temp" style="margin-left:5%;"> <span> </span></p>
                 </div>
             </div>
             <div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card4-day" style="margin-left:5%;">Sun</h5>
-                    <p class="card-text forecast-temp" style="margin-left:5%;">18° <span>8°</span></p>
+                    <h5 class="card-title card4-day" style="margin-left:5%;"></h5>
+                    <p class="card-text forecast-temp" style="margin-left:5%;"> <span></span></p>
                 </div>
             </div>
         </div>
+
     </div>
-    <a href="https://github.com/Hind-SM/WeatherApp.git" target ="_blank" class = "GitButton">Link to Github repository</a>
-    <image class="Icon sun_image" src="sunIcon.png"></image>
     <script src="JavaScript.js"></script>
 </body>
 

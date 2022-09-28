@@ -32,7 +32,7 @@ function show_WeatherForecast(response) {
         forecastBlocks.innerHTML = forecastBlocks.innerHTML +
             `<div class="col">
                 <div class="card-body shadow p-2 mb-5 bg-body ">
-                    <h5 class="card-title card1-day" style="margin-left:5%;">${formatDay(forecastday.dt)}</h5>
+                    <h5 class="card-title card1-day" style="margin-left:5%;">${formatDay(forecastday.dt)} <image src = "http://openweathermap.org/img/wn/${forecastday.weather[0].icon}@2x.png" width = "100"/></h5>
                     <p class="card-text forecast-temp" style="margin-left:5%;">${Math.round(forecastday.temp.max)}° <span> ${Math.round(forecastday.temp.min)}°</span></p>
                 </div>`;
     })
@@ -47,6 +47,7 @@ function Daily_forecast(coordinates) {
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(url).then(show_WeatherForecast);
 };
+
 
 //getting weather and icon and changing background with api response
 function showWeather(response) {
