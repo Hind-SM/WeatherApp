@@ -7,22 +7,20 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-.Search_Button{
+.Search_Button {
   font-size: 35px;
-  background-color: #feed9ff9;
+  background-color: rgba(240, 255, 255, 0.68);
   border-radius: 25px;
   padding: 7%;
-  width:17rem;
+  width: 17rem;
   border-color: rgba(0, 0, 0, 0.721);
-  
 }
-.Search_Button:hover{
-  cursor:pointer;
+.Search_Button:hover {
+  cursor: pointer;
   background: rgb(246, 248, 201);
   color: #862413;
   border: 1px solid #862413;
   transition: ease-in-out 0.15s;
-
 }
 
 .card-body {
@@ -35,7 +33,7 @@ body {
   font-size: 45px;
 }
 
-.City_Name{
+.City_Name {
   text-align: center;
   font-size: 60px;
 }
@@ -52,7 +50,7 @@ body {
   font-size: 30px;
 }
 
-.center-align{
+.center-align {
   text-align: center;
 }
 
@@ -64,17 +62,22 @@ body {
   text-align: center;
 }
 
-.units{
-    font-size: 50px;
-    color:#7c2e04;
-
+.units {
+  font-size: 50px;
+  color: #7c2e04;
 }
 
-.units:hover, .units:focus, .units:active, .units:visited {
-  text-decoration:underline;
+.units:hover,
+.units:focus,
+.units:active,
+.units:visited {
+  text-decoration: underline;
 }
 
-.units:hover, .units:focus, .units:hover, .units:active{
+.units:hover,
+.units:focus,
+.units:hover,
+.units:active {
   color: #fe813e;
 }
 
@@ -93,12 +96,12 @@ span {
 .sun_image {
   position: relative;
   left: 600px;
-  bottom: 900px;
+  bottom: 55rem;
   width: 500px;
 }
-.GitButton{
+.GitButton {
   font-size: 30px;
-  background-color: #feed9f91;
+  background-color: rgba(240, 255, 255, 0.68);
   border-radius: 25px;
   padding: 2%;
   border-color: rgba(0, 0, 0, 0.967);
