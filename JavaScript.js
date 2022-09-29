@@ -156,4 +156,3 @@ function DefaultWeather() {
 
 DefaultWeather();
 
-let new_var = 1;
